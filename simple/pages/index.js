@@ -1,9 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-
+import Link from "next/link";
 import axios from "axios";
-
-import * as Sentry from "@sentry/nextjs";
 
 export default function Home() {
   return (
@@ -35,11 +33,16 @@ export default function Home() {
 
           <button
             onClick={() => {
-              Sentry.captureException(new Error("sample frontend error"));
+              Sentry.captureException(
+                new Error("captured exception on the frontend")
+              );
             }}
           >
             <h3>`captureException`</h3>
           </button>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
         </div>
       </main>
 
