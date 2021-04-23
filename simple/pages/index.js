@@ -27,7 +27,7 @@ export default function Home() {
 
           <button
             onClick={async () => {
-              await axios.get("http://127.0.0.1:3000/api/server");
+              await axios.get("/api/server");
             }}
           >
             <h3>Backend error</h3>
