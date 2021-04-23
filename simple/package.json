@@ -11,7 +11,9 @@
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
-    "@sentry/nextjs": "6.3.0-beta.3",
+    "@sentry/integrations": "6.2.5",
+    "@sentry/nextjs": "6.3.1",
+    "@sentry/webpack-plugin": "^1.15.0",
     "axios": "^0.21.1",
     "next": "10.0.7",
     "react": "17.0.1",
