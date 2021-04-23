@@ -3,6 +3,8 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import axios from "axios";
 
+import * as Sentry from '@sentry/nextjs';
+
 export default function Home() {
   return (
     <div className={styles.container}>

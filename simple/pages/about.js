@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import DynamicComponent from "../components/test.jsx";
+import DynamicComponent from "../components/test.tsx";
 
 export default function About({ name }) {
   return (
