@@ -1,9 +1,10 @@
 module.exports = {
   webpack: (config) => {
+    const entries = config.entry;
     config.entry = async () => {
-      const entries = await config.entry();
-      console.log(entries);
-      return entries;
+      const entriesAwaited = await entries();
+      console.log(entriesAwaited);
+      return entriesAwaited;
     }
     return config;
   },
