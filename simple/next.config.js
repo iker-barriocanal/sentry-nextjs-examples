@@ -1,5 +1,5 @@
 module.exports = {
-  webpack = (config) => {
+  webpack: (config) => {
     config.entry = async () => {
       const entries = await config.entry();
       console.log(entries);
