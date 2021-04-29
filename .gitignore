@@ -2,3 +2,4 @@ sentry.properties
 
 .next/
 node_modules/
+.vercel

@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import axios from "axios";
 
-import * as Sentry from '@sentry/nextjs';
+import * as Sentry from "@sentry/nextjs";
 
 export default function Home() {
   return (
@@ -15,8 +15,16 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>NextJS test app</h1>
-
         <div className={styles.grid}>
+          <button
+            onClick={() => {
+              Sentry.captureException(
+                new Error("captured exception on the frontend")
+              );
+            }}
+          >
+            <h3>`captureException`</h3>
+          </button>
           <button
             onClick={() => {
               throw new Error("sample frontend error");
@@ -32,16 +40,8 @@ export default function Home() {
           >
             <h3>Backend error</h3>
           </button>
-
-          <button
-            onClick={() => {
-              Sentry.captureException(
-                new Error("captured exception on the frontend")
-              );
-            }}
-          >
-            <h3>`captureException`</h3>
-          </button>
+        </div>
+        <div>
           <Link href="/about">
             <a>About</a>
           </Link>
