@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "clean": "rm -rf .next/",
+    "prod": "yarn clean && yarn build && yarn start",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -12,10 +14,10 @@
   },
   "dependencies": {
     "@sentry/integrations": "6.2.5",
-    "@sentry/nextjs": "6.3.3",
+    "@sentry/nextjs": "6.3.4-beta.3",
     "@sentry/webpack-plugin": "^1.15.0",
     "axios": "^0.21.1",
-    "next": "10.0.7",
+    "next": "10.2.0",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
