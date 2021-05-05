@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
+    "clean": "rm -rf .next/",
+    "prod": "yarn clean && yarn build && yarn start",
     "dev": "next",
     "build": "next build",
     "start": "next start"
