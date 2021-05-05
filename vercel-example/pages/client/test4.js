@@ -1,6 +1,3 @@
-import * as Sentry from "@sentry/nextjs";
-
-
 import { useEffect } from 'react'
 
 const Test4 = () => {

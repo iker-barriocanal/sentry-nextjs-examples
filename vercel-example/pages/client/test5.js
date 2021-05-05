@@ -1,6 +1,3 @@
-import * as Sentry from "@sentry/nextjs";
-
-
 const Test5 = () => (
   <>
     <h1>Client Test 5</h1>

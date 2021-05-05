@@ -1,5 +1,3 @@
-import * as Sentry from "@sentry/nextjs";
-
 const doAsyncWork = () => Promise.reject(new Error('Client Test 1'))
 doAsyncWork()
 
